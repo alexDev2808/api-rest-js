@@ -6,7 +6,7 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #FFD966;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,6 @@ button {
 }
 .container-img {
     max-width: 890px;
-    height: 580px;
     overflow: hidden;
 }
 .container-img img {

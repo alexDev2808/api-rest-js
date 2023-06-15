@@ -1,29 +1,21 @@
-console.log("Hola Mundooo!! Jejeje");
 
-const url = "https://api.thecatapi.com/v1/images/search";
+const urlAPI = "https://api.thecatapi.com/v1/images/search?limit=3";
 
-const img = document.querySelector("img");
+const img1 = document.querySelector("#img1");
+const img2 = document.querySelector("#img2");
+const img3 = document.querySelector("#img3");
+const img4 = document.querySelector("#img4");
 const btnChange = document.querySelector("#button")
 
-async function aleatorio(urlAPI) {
+async function changeImg() {
+    const response = await fetch(urlAPI);
+    const data = await response.json();
+    // console.log(data)
+    img1.src = data[0].url;
+    img2.src = data[1].url;
+    img3.src = data[2].url;
+    img4.src = data[3].url;
 
-    try {
-        const response = await fetch(urlAPI)
-        const data = await response.json();
-        return data;
-    } catch (er) {
-        console.log(er);
-    }
 }
 
-const changeImg = async () => {
-    try {
-        const imgResponse = await aleatorio(url);
-        img.src = imgResponse[0].url;
-    } catch (er) {
-        console.log("Error: " + er);
-    }
-}
-
-
-btnChange.onclick = changeImg;
+changeImg()
