@@ -12,6 +12,13 @@ img {
     height: 100%;
     object-fit: cover;
 }
+.span-error {
+    display: inline-block; 
+    font-size: 1.6rem;  
+    margin-left: 1rem;
+    background-color: #F55353;
+    color: #F7FFE5;
+   }
 .btn {
     padding: 1rem 3.8rem;
     font-size: 1.4rem;
@@ -92,6 +99,8 @@ img {
     background-color: #F55353;
     color: #F7FFE5;
 }
+
+
 
 @media screen and (min-width: 1024px) {
     .header h1 {
