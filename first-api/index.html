@@ -3,21 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Gatitos Aleatorios</title>
 </head>
 <body>
-    <h1>Gatitos Aleatorios</h1> 
+    <header class="header">
+        <h1>Gatitos Aleatorios</h1> 
     
-    <button type="button" id="button" onclick="changeImg()">Observa la magia</button>
+        <button type="button" id="button" class="btn btnAleatorio" onclick="changeImg()">Observa la magia</button>
+    </header>
 
-    <div class="container-img">
-        <img id="img1" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">
-        <img id="img2" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">
-        <img id="img3" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">
-        <img id="img4" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">
-    </div>
+    <section class="section-imgs">
 
+        <h2>Fotos Aleatorias</h2>
+
+        <div class="container-imgs">
+            <div class="card--img">
+                <div class="card-container__img">
+                    <img id="img1" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">   
+                </div>
+                <button class="btn btnFavs">Agregar a Favoritos</button>
+            </div>
+            <div class="card--img">
+                <div class="card-container__img">
+                    <img id="img2" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">
+                </div>
+                <button class="btn btnFavs">Agregar a Favoritos</button>
+            </div>
+            <div class="card--img">
+                <div class="card-container__img">
+                    <img id="img3" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">
+                </div>
+                <button class="btn btnFavs">Agregar a Favoritos</button>
+            </div>
+        </div>    
+    </section>
+
+    <section class="section-favs">
+
+        <h2>Fotos Favoritas</h2>
+
+        <div class="container-imgs">
+            <div class="card--img">
+                <div class="card-container__img">
+                    <img id="img1" src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" alt="Imagen de un gatito aleatorio">
+                </div>
+                <button class="btn btnEliminar">Eliminar de Favoritos</button>
+            </div>
+        </div>  
+    </section>
     <script src="./index.js"></script>
 </body>
 </html>

@@ -3,35 +3,106 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-height: 100vh;
-    background-color: #FFD966;
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn {
+    padding: 1rem 3.8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    margin: 1.4rem;
+    align-self: flex-end;
+    transition: all ease .2s;
+}
+.header {
+    width: 100%;
+    min-height: 40vh;
+    background-color: #F1C27B;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-h1 {
-    font-size: 4rem;
-    color: #FFF4F4;
+.header h1 {
+    font-size: 3rem;
+    color: #F7FFE5;
+    margin-bottom: 3rem;
 }
-button {
-    padding: 12px 24px;
-    margin: 1.5rem 0;
-    border-radius: 4px;
-    border: 1px solid #000;
-    background-color: #FF7B54;
-    color: white;
-    font-size: 1rem;
+.header .btnAleatorio {
+    background-color: #606C5D;
+    color: #F7FFE5;
+    align-self: center;
 }
-.container-img {
-    max-width: 890px;
+.btnAleatorio:hover {
+    background-color: #9aa598;
+}
+.section-imgs {
+    width: 100%;
+    min-height: 50vh;
+}
+.section-imgs h2 {
+    font-size: 2.8rem;
+    padding: 0 1rem;
+    margin-top: 3rem;
+
+}
+.container-imgs {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-rows: 38rem;
+    grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+    gap: 3.5rem;
+    padding: 3rem 1rem;
+}
+.card--img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #E3C770;
+    border-radius: 12px;
     overflow: hidden;
 }
-.container-img img {
-    max-width: 100%;
-    object-fit: contain;
-    border-radius: 6px;
+.card-container__img {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.section-favs {
+    width: 100%;
+    min-height: 50vh;
+}
+.section-favs h2 {
+    font-size: 2.8rem;
+    padding: 0 1rem;
+    margin-top: 3rem;
+}
+.btnEliminar {
+    background-color: #F55353;
+    color: #F7FFE5;
+}
+
+@media screen and (min-width: 1024px) {
+    .header h1 {
+        font-size: 5rem;
+    }
+    .section-imgs h2 {
+        text-align: center;
+        font-size: 3.4rem;
+    }
+    .section-favs h2 {
+        text-align: center;
+        font-size: 3.4rem;
+    }
 }
