@@ -14,6 +14,14 @@ const btn3 = document.querySelector('#btn3');
 const spanError = document.querySelector("#error");
 
 
+const api = axios.create({
+    baseURL: "https://api.thecatapi.com/v1/",
+})
+
+api.defaults.headers.common['X-API-KEY'] = API_KEY;
+
+
+
 async function loadRandomMichis() {
     const response = await fetch(API_URL_RANDOM, {
         method: 'GET',
@@ -70,18 +78,23 @@ async function loadFavoritesMichis() {
 }
 
 async function saveFavoritesPics(id) {
-    const response = await fetch(API_URL_FAVORITES, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-API-KEY': API_KEY
-        },
-        body: JSON.stringify(
-            {
-                image_id: id
-            }
-        )
+
+    const res = await api.post('/favourites', {
+        image_id: id
     })
+
+    // const response = await fetch(API_URL_FAVORITES, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'X-API-KEY': API_KEY
+    //     },
+    //     body: JSON.stringify(
+    //         {
+    //             image_id: id
+    //         }
+    //     )
+    // })
 
     loadFavoritesMichis();
 
