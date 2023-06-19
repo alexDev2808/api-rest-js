@@ -62,6 +62,7 @@ async function loadFavoritesMichis() {
 
         data.forEach(michi => {
             const article = document.createElement('article')
+            const div = document.createElement('div');
             const img = document.createElement('img');
             const btn = document.createElement('button');
             const btnText = document.createTextNode('Eliminar de favoritos')
@@ -69,8 +70,12 @@ async function loadFavoritesMichis() {
             btn.appendChild(btnText);
             btn.onclick = () => deleteFavoriteMichi(michi.id);
             img.src = michi.image.url;
-            article.appendChild(img);
+            article.classList.add("card--img");
+            article.appendChild(div)
+            div.classList.add("card-container__img")
+            div.appendChild(img);
             article.appendChild(btn);
+            btn.classList.add("btn", "btnEliminar")
             section.appendChild(article);
         })
         
@@ -120,8 +125,6 @@ async function deleteFavoriteMichi(id) {
 async function uploadMichiPhoto() {
     const form = document.getElementById('uploadingForm');
     const formData = new FormData(form);
-
-    console.log(formData.get('file'));
 
     const response = await fetch(API_URL_UPLOAD, {
         method: 'POST',
