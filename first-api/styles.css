@@ -89,6 +89,9 @@ img {
 
 .section-upload-img {
     padding: 3rem 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .section-upload-img h2 {
     font-size: 2.8rem;
@@ -120,5 +123,8 @@ img {
     .section-favs h2 {
         text-align: center;
         font-size: 3.4rem;
+    }
+    .section-upload-img {
+        align-items: center;
     }
 }
